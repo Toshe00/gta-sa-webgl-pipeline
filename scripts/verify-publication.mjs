@@ -57,7 +57,24 @@ export function verifyPublication(root = repositoryRoot, { gitMode } = {}) {
     if (data.length > policy.maxFileBytes) throw new Error(`File budget exceeded: ${name}`);
     if (data[0] === 0x4d && data[1] === 0x5a) throw new Error(`PE executable signature: ${name}`);
     if (data.includes(0) || token.test(data.toString('utf8'))) throw new Error(`Binary or credential candidate: ${name}`);
-    if (name !== 'reviewed-files.json' && expectedHashes.get(name) !== reviewDigest(name, data)) throw new Error(`File changed since review: ${name}`);
+    if (name !== 'reviewed-files.json' && expectedHashes.get(name) !== reviewDigest(name, data)) {
+      if (name === 'vercel.json') {
+        const expected = reviewed.files.find(f => f.path === name).reviewedConfig;
+        const actual = JSON.parse(data.toString('utf8'));
+        const changes = [];
+        function compare(a, b, key = '') {
+          if (JSON.stringify(sortedJson(a)) === JSON.stringify(sortedJson(b))) return;
+          if (a && b && typeof a === 'object' && typeof b === 'object') {
+            for (const k of new Set([...Object.keys(a), ...Object.keys(b)])) compare(a[k], b[k], key + '/' + k);
+          } else changes.push({ path: key, expectedType: typeof a, actualType: typeof b,
+            ...(typeof a === 'string' && typeof b === 'string' && a.length < 500 && b.length < 500 && !token.test(b)
+              ? { expected: a, actual: b } : {}) });
+        }
+        compare(expected, actual);
+        throw new Error(`File changed since review: ${name}; differences=${JSON.stringify(changes)}`);
+      }
+      throw new Error(`File changed since review: ${name}`);
+    }
   }
   if (bytes > policy.maxSourceBytes) throw new Error('Total source budget exceeded');
   return { passed: true, scope: policy.mode, sourceFiles: names.length, sourceBytes: bytes, gameAssetsPublished: false };

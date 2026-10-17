@@ -8,6 +8,7 @@ const files = policy.approvedFiles.filter(n => n !== 'reviewed-files.json').map(
   if (!fs.lstatSync(f).isFile() || fs.lstatSync(f).isSymbolicLink()) throw new Error(`Invalid reviewed source: ${name}`);
   return { path: name, sha256: reviewDigest(name, fs.readFileSync(f)),
     digestMode: name === 'vercel.json' ? 'canonical-json-all-properties' : 'exact-bytes',
+    ...(name === 'vercel.json' ? { reviewedConfig: JSON.parse(fs.readFileSync(f, 'utf8')) } : {}),
     provenance: 'Authored publication infrastructure code; no GTA resource content' };
 });
 fs.writeFileSync(path.join(repositoryRoot, 'reviewed-files.json'), JSON.stringify({

@@ -42,6 +42,103 @@
       "path": "vercel.json",
       "sha256": "f14244ace11f6d899caee9d721a9fdff894a866b9bf9d79233297790f9a31292",
       "digestMode": "canonical-json-all-properties",
+      "reviewedConfig": {
+        "$schema": "https://openapi.vercel.sh/vercel.json",
+        "framework": null,
+        "installCommand": "echo No dependencies to install",
+        "buildCommand": "npm run build",
+        "outputDirectory": "public",
+        "cleanUrls": false,
+        "trailingSlash": false,
+        "headers": [
+          {
+            "source": "/(.*)",
+            "headers": [
+              {
+                "key": "X-Content-Type-Options",
+                "value": "nosniff"
+              },
+              {
+                "key": "Referrer-Policy",
+                "value": "no-referrer"
+              },
+              {
+                "key": "Cross-Origin-Opener-Policy",
+                "value": "same-origin"
+              },
+              {
+                "key": "Cross-Origin-Embedder-Policy",
+                "value": "require-corp"
+              },
+              {
+                "key": "Cache-Control",
+                "value": "public, max-age=0, must-revalidate"
+              },
+              {
+                "key": "Content-Security-Policy",
+                "value": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; connect-src 'self'; img-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'"
+              }
+            ]
+          },
+          {
+            "source": "/probes/(.*)",
+            "headers": [
+              {
+                "key": "Cache-Control",
+                "value": "public, max-age=31536000, immutable"
+              },
+              {
+                "key": "Cross-Origin-Resource-Policy",
+                "value": "same-origin"
+              }
+            ]
+          },
+          {
+            "source": "/probes/:name.wasm",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/wasm"
+              }
+            ]
+          },
+          {
+            "source": "/probes/:name.data",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/octet-stream"
+              }
+            ]
+          },
+          {
+            "source": "/probes/:name.wasm.br",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "application/wasm"
+              },
+              {
+                "key": "Content-Encoding",
+                "value": "br"
+              }
+            ]
+          },
+          {
+            "source": "/probes/:name.txt.br",
+            "headers": [
+              {
+                "key": "Content-Type",
+                "value": "text/plain; charset=utf-8"
+              },
+              {
+                "key": "Content-Encoding",
+                "value": "br"
+              }
+            ]
+          }
+        ]
+      },
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
@@ -70,13 +167,13 @@
     },
     {
       "path": "scripts/verify-publication.mjs",
-      "sha256": "12f1867ab795a317907c2bf960d373dc2757870f912013a081104febb89f80bc",
+      "sha256": "63b7164c79f5a06d41ab9d6ed4500d3c06f826a9d6f05b3bbe237dda84dbefff",
       "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "scripts/review-files.mjs",
-      "sha256": "4287bcfe68e2b0c9412c046ec0afe00155cb6b6ff79f7e51de8491f343dcc598",
+      "sha256": "4f325401dee8f64335bf96a5baf09d65c5b66f27b4d47f389af1e2dfcfe9edbd",
       "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
