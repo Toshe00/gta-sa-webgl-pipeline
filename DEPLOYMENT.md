@@ -2,7 +2,7 @@
 
 ## Scope and target
 
-This is a dedicated publication repository, not the Unity development project. Vercel framework: Other; Node 24; no dependencies; build `npm run build`; output `public`. `main` is production, other branches are previews. The linked project and stable production domain are recorded in the local deployment report. Verify project/team/commit/environment before every mutation. Do not deploy from the Unity project or its parent folder.
+This is a dedicated publication repository, not the Unity development project. Vercel framework: Other; Node 24; no dependencies; build `npm run build`; output `public`. The intended Git connection uses `main` for production and other branches for previews. Creation and local linking of the Vercel project succeeded; the server rejected the Git connection because its GitHub App is not installed. Until that prerequisite is completed, a plain push only runs GitHub checks; an explicit authenticated CLI deployment is required. The project and stable production domain are recorded in the local deployment report. Verify project/team/commit/environment before every mutation. Do not deploy from the Unity project or its parent folder.
 
 Only the files listed in publication-policy.json and reviewed-files.json may enter Git. Build output is ignored by Git and generated again by Vercel. There is no remote game URL, asset proxy or link to a download distribution.
 
@@ -22,7 +22,9 @@ git commit -m "Describe the verified infrastructure change"
 git push origin main
 ```
 
-The local publish helper stages the explicit allowlist and repeats the gate. Git hooks check the index before commit and HEAD before push. CI is pinned to reviewed action commits, contents:read, standard ubuntu-latest and a three-minute timeout. No deployment token is stored in GitHub: Vercel's Git connection performs deployment and reruns the source gate/tests in its own build. The Vercel gate does not depend on GitHub Actions finishing first. A changed receipt is a review record, not a cryptographic signature from an independent reviewer; review of pipeline-code changes remains necessary.
+The local publish helper stages the explicit allowlist and repeats the gate. Git hooks check the index before commit and HEAD before push. CI is pinned to reviewed action commits, contents:read, standard ubuntu-latest and a three-minute timeout. No deployment token is stored in GitHub. Once authorized, Vercel's Git connection will deploy and rerun the source gate/tests in its own build. Explicit CLI deployments already run that same build. The Vercel gate does not depend on GitHub Actions finishing first. A changed receipt is a review record, not a cryptographic signature from an independent reviewer; review of pipeline-code changes remains necessary.
+
+Account intervention to enable Git automation: open https://github.com/apps/vercel, install/configure the official app for the dedicated repository only, then run `vercel git connect https://github.com/Toshe00/gta-sa-webgl-pipeline.git --scope rpss-projects-8907c6b3 --non-interactive` from the explicitly linked publication repository. Verify the resulting connection and production branch before testing a push. No credential should be pasted into this repository or a chat.
 
 Vercel never runs Unity. The game workflow is local: development -> existing Unity editor assertions/tests -> new, separate WebGL build -> real Chrome DevTools validation -> file-bound rights and validation audit -> new authorized artifact snapshot -> source review -> explicit commit/push -> Vercel build -> production HTTP/Chrome checks. The rights/artifact-transport steps for the game remain blocked and are not claimed operational.
 

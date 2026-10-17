@@ -14,17 +14,17 @@
     },
     {
       "path": ".vercelignore",
-      "sha256": "88fc4079d511ebf09719c96dd2d9ee93b31d904fb5b3044881b0a2fc951a1e6f",
+      "sha256": "a7e6a4128e92cc557d8ebc12d617dc41fef38a33ae56a888c2468511054dc912",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "README.md",
-      "sha256": "54ed61dd3c71901ccbbb0e2229a34379cfaa2a531c1517a857a0aa661e478f5b",
+      "sha256": "5e1369b15021341f5539077145b318f3d88eafe40d033aa62f6770626d930c10",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "DEPLOYMENT.md",
-      "sha256": "4dcf843e885737abba9a1428cafe964d13359667293f93223012c32b1ee19dc7",
+      "sha256": "d68fbdc23de025edd2935033bad7b847e62b77b8cf163eff9ec50916e0395ef7",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {

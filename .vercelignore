@@ -16,3 +16,4 @@ Library
 Temp
 BrowserProfile
 HTTP-Cache
+!.gitignore
