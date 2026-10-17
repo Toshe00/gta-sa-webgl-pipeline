@@ -28,7 +28,7 @@
     },
     {
       "path": "DEPLOYMENT.md",
-      "sha256": "f652cf405f2d90d86d066f4d479817d6f9a487e190ce4d4b4eeb39d14d684528",
+      "sha256": "db4e79dc7fd49b637b568a4a0410bcc113fa760bb6773d66b09d8ebb1346586e",
       "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
@@ -151,7 +151,7 @@
     },
     {
       "path": "site/index.html",
-      "sha256": "3281d5bd75bb27d832c4039a3c249d238f716f129acedb44ee93932b31471ccf",
+      "sha256": "caa6ca965cb60432dcc08a19c84503517785fdb39f2f34fc721c18d4e759916d",
       "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
@@ -181,7 +181,7 @@
     },
     {
       "path": "scripts/build-site.mjs",
-      "sha256": "765b80057db121fbde22093fe22518a694381a42b55e833c19f5b5a329e95e44",
+      "sha256": "a2b24705e66a2d64678181dc7e3db18a4d100a81a01a5ed66ed1a056c4d27e54",
       "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
