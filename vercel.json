@@ -1,5 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "name": "gta-sa-webgl-pipeline",
   "framework": null,
   "installCommand": "echo No dependencies to install",
   "buildCommand": "npm run build",

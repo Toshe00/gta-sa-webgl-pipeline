@@ -28,7 +28,7 @@
     },
     {
       "path": "DEPLOYMENT.md",
-      "sha256": "6f40b93f76c7c9c1c4bc859cca8556f9014cd319ab05bdb4facf35a4ec3b50af",
+      "sha256": "f652cf405f2d90d86d066f4d479817d6f9a487e190ce4d4b4eeb39d14d684528",
       "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
@@ -40,10 +40,12 @@
     },
     {
       "path": "vercel.json",
-      "sha256": "f14244ace11f6d899caee9d721a9fdff894a866b9bf9d79233297790f9a31292",
+      "sha256": "ef4c4b9324c74b63bffb6067278c6f71181a12d7a59831ee1034ce6c7341c759",
       "digestMode": "canonical-json-all-properties",
       "reviewedConfig": {
         "$schema": "https://openapi.vercel.sh/vercel.json",
+        "version": 2,
+        "name": "gta-sa-webgl-pipeline",
         "framework": null,
         "installCommand": "echo No dependencies to install",
         "buildCommand": "npm run build",
