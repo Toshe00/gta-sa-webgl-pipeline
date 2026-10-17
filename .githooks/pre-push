@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+node scripts/verify-publication.mjs --git-head
+node --test tests/*.test.mjs

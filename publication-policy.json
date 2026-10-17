@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "mode": "infrastructure-only",
+  "gameReleaseEnabled": false,
+  "redistributionAuthorization": null,
+  "maxSourceFiles": 40,
+  "maxSourceBytes": 1000000,
+  "maxFileBytes": 150000,
+  "approvedFiles": [
+    ".gitignore", ".gitattributes", ".vercelignore", "README.md", "DEPLOYMENT.md",
+    "package.json", "vercel.json", "publication-policy.json", "reviewed-files.json",
+    "site/index.html", "site/diagnostics.js", "site/style.css",
+    "scripts/verify-publication.mjs", "scripts/review-files.mjs", "scripts/build-site.mjs",
+    "scripts/verify-http.mjs", "scripts/check-webgl-release.mjs", "tests/publication.test.mjs",
+    ".github/workflows/ci.yml", ".githooks/pre-commit", ".githooks/pre-push"
+  ],
+  "excludedContent": [
+    "All Rockstar originals and derivatives, including coordinates, scripts, GXT and navigation data",
+    "Unity Player, .data, WASM, scenes, meshes, textures, animation, collision and AssetBundles of the game",
+    "Game screenshots, audio, archives, distribution executables and HOODLUM files",
+    "Browser profiles, credentials, environment files, local saves, cache and local audit inventories"
+  ]
+}

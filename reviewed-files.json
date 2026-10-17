@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "scope": "Original publication code and technical probes only; no game data",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "28b4d5ab671258ee300d1347ce485f2d3ed2523387e034ec9d449c1f0aa33fc3",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "c722bc225079d73e67ac35a09a31143ee6ca17ecf20dbc6dd795c5ac05585b23",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": ".vercelignore",
+      "sha256": "88fc4079d511ebf09719c96dd2d9ee93b31d904fb5b3044881b0a2fc951a1e6f",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "README.md",
+      "sha256": "54ed61dd3c71901ccbbb0e2229a34379cfaa2a531c1517a857a0aa661e478f5b",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "sha256": "4dcf843e885737abba9a1428cafe964d13359667293f93223012c32b1ee19dc7",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "package.json",
+      "sha256": "6ed0787039b67df6f8459cba2703dee6cfe0808d882e53294fd5fc498383b457",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "69f9f0260be7c011e525dca49c70c7385b607b340a42473f6575262fa0a000e8",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "publication-policy.json",
+      "sha256": "017ab642ed17b36f6737851e7d98b9949701256c773f2bc0688413f1682af425",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "site/index.html",
+      "sha256": "3281d5bd75bb27d832c4039a3c249d238f716f129acedb44ee93932b31471ccf",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "site/diagnostics.js",
+      "sha256": "0796a6503e1c8531e233f43282a162385c930329429be14e79a842d37f5cc660",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "site/style.css",
+      "sha256": "8ea4932497fd2ffe0d06883970f253f5ba9c0474db21cb72244017fb733ff210",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "scripts/verify-publication.mjs",
+      "sha256": "c696d42c8326679b28deacf14e32482805266e85a9427d3fff7f03ee98b26146",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "scripts/review-files.mjs",
+      "sha256": "264ae6f7ba16e071f117b0a6ef5bf93c0d67d72dc8b8a9a4a4ff1f9f720cbabc",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "scripts/build-site.mjs",
+      "sha256": "765b80057db121fbde22093fe22518a694381a42b55e833c19f5b5a329e95e44",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "scripts/verify-http.mjs",
+      "sha256": "ba6d3df5c7c05f49629742f3b0c79ce6b1f3b72beb190182fe67cb0afed54b24",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "scripts/check-webgl-release.mjs",
+      "sha256": "7ea488ac93156d7297d998cbfe5dd53dc0a22ac862ac27d1d5e6856886443dfb",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": "tests/publication.test.mjs",
+      "sha256": "43d43328b67fb24dd1c39f7b206fcfb6542c70e8ca57e6f1f8c4b669526c7086",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "992ccfe5f13696c131c2ae54993fa240939efe92508525072e4d73adc40e4f21",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": ".githooks/pre-commit",
+      "sha256": "396f527abd6e7878c1048e3259d196fd58a6ef281323c6468a51832f4c2914d0",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    },
+    {
+      "path": ".githooks/pre-push",
+      "sha256": "c2a9096f75d0856a6847dd525192064375c2aaf788261e74374ea4ed3582dcd1",
+      "provenance": "Authored publication infrastructure code; no GTA resource content"
+    }
+  ]
+}

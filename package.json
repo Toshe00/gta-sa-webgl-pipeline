@@ -1,0 +1,14 @@
+{
+  "name": "gta-sa-webgl-publication-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "check": "node scripts/verify-publication.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build-site.mjs",
+    "review": "node scripts/review-files.mjs",
+    "verify:http": "node scripts/verify-http.mjs"
+  }
+}
