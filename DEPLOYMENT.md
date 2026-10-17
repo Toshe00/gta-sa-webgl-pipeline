@@ -6,6 +6,8 @@ This is a dedicated publication repository, not the Unity development project. V
 
 Only the files listed in publication-policy.json and reviewed-files.json may enter Git. Build output is ignored by Git and generated again by Vercel. There is no remote game URL, asset proxy or link to a download distribution.
 
+All source receipts use exact-byte SHA-256 except vercel.json, whose receipt uses canonical JSON (every property and ordered array included). This accommodates Vercel reserialization of that configuration in its build container; changing a header or any other value still fails the gate. Tests cover both harmless reserialization and a rejected header change.
+
 ## Code changes and automatic deployment
 
 Read each changed source before refreshing the review receipt. Never regenerate that receipt inside CI.

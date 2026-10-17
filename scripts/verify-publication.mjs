@@ -6,6 +6,12 @@ import { fileURLToPath } from 'node:url';
 
 export const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const sha256 = data => createHash('sha256').update(data).digest('hex');
+const sortedJson = value => Array.isArray(value) ? value.map(sortedJson)
+  : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(k => [k, sortedJson(value[k])])) : value;
+// Vercel may reserialize its config in the remote build container. Compare every
+// JSON property and ordered array while ignoring whitespace/property order only.
+export const reviewDigest = (name, data) => sha256(name === 'vercel.json'
+  ? JSON.stringify(sortedJson(JSON.parse(data.toString('utf8')))) : data);
 const denied = /\.(exe|dll|asi|rar|zip|7z|img|dff|txd|col|ifp|ipl|ide|scm|gxt|gtex|gtmd|asset|prefab|unity|sav|save|png|jpg|wav|mp3|ogg|fbx|glb|bin|wasm|data|br|gz)$/i;
 const ignored = new Set(['.git', '.vercel', 'public', 'node_modules']);
 const token = /(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{35,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)/;
@@ -51,7 +57,7 @@ export function verifyPublication(root = repositoryRoot, { gitMode } = {}) {
     if (data.length > policy.maxFileBytes) throw new Error(`File budget exceeded: ${name}`);
     if (data[0] === 0x4d && data[1] === 0x5a) throw new Error(`PE executable signature: ${name}`);
     if (data.includes(0) || token.test(data.toString('utf8'))) throw new Error(`Binary or credential candidate: ${name}`);
-    if (name !== 'reviewed-files.json' && expectedHashes.get(name) !== sha256(data)) throw new Error(`File changed since review: ${name}`);
+    if (name !== 'reviewed-files.json' && expectedHashes.get(name) !== reviewDigest(name, data)) throw new Error(`File changed since review: ${name}`);
   }
   if (bytes > policy.maxSourceBytes) throw new Error('Total source budget exceeded');
   return { passed: true, scope: policy.mode, sourceFiles: names.length, sourceBytes: bytes, gameAssetsPublished: false };

@@ -38,6 +38,18 @@ test('A changed approved source fails its review hash', t => {
   const root = checked(t); fs.appendFileSync(path.join(root, 'site/index.html'), '\nchanged');
   assert.throws(() => verifyPublication(root), /changed since review/);
 });
+test('Vercel config reserialization preserves every reviewed property', t => {
+  const root = checked(t), f = path.join(root, 'vercel.json');
+  const config = JSON.parse(fs.readFileSync(f));
+  fs.writeFileSync(f, JSON.stringify(Object.fromEntries(Object.entries(config).reverse())));
+  assert(verifyPublication(root).passed);
+});
+test('A changed Vercel header is still rejected after JSON normalization', t => {
+  const root = checked(t), f = path.join(root, 'vercel.json');
+  const config = JSON.parse(fs.readFileSync(f)); config.headers[0].headers[0].value = 'changed';
+  fs.writeFileSync(f, JSON.stringify(config));
+  assert.throws(() => verifyPublication(root), /changed since review/);
+});
 test('An executable renamed to an approved source still fails', t => {
   const root = checked(t); fs.writeFileSync(path.join(root, 'site/index.html'), Buffer.from([77, 90, 1, 2]));
   assert.throws(() => verifyPublication(root), /PE executable/);

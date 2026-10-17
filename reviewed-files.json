@@ -5,101 +5,121 @@
     {
       "path": ".gitignore",
       "sha256": "28b4d5ab671258ee300d1347ce485f2d3ed2523387e034ec9d449c1f0aa33fc3",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": ".gitattributes",
       "sha256": "c722bc225079d73e67ac35a09a31143ee6ca17ecf20dbc6dd795c5ac05585b23",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": ".vercelignore",
       "sha256": "a7e6a4128e92cc557d8ebc12d617dc41fef38a33ae56a888c2468511054dc912",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "README.md",
       "sha256": "5e1369b15021341f5539077145b318f3d88eafe40d033aa62f6770626d930c10",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "DEPLOYMENT.md",
-      "sha256": "d68fbdc23de025edd2935033bad7b847e62b77b8cf163eff9ec50916e0395ef7",
+      "sha256": "6f40b93f76c7c9c1c4bc859cca8556f9014cd319ab05bdb4facf35a4ec3b50af",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "package.json",
       "sha256": "6ed0787039b67df6f8459cba2703dee6cfe0808d882e53294fd5fc498383b457",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "vercel.json",
-      "sha256": "69f9f0260be7c011e525dca49c70c7385b607b340a42473f6575262fa0a000e8",
+      "sha256": "f14244ace11f6d899caee9d721a9fdff894a866b9bf9d79233297790f9a31292",
+      "digestMode": "canonical-json-all-properties",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "publication-policy.json",
       "sha256": "017ab642ed17b36f6737851e7d98b9949701256c773f2bc0688413f1682af425",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "site/index.html",
       "sha256": "3281d5bd75bb27d832c4039a3c249d238f716f129acedb44ee93932b31471ccf",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "site/diagnostics.js",
       "sha256": "0796a6503e1c8531e233f43282a162385c930329429be14e79a842d37f5cc660",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "site/style.css",
       "sha256": "8ea4932497fd2ffe0d06883970f253f5ba9c0474db21cb72244017fb733ff210",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "scripts/verify-publication.mjs",
-      "sha256": "c696d42c8326679b28deacf14e32482805266e85a9427d3fff7f03ee98b26146",
+      "sha256": "12f1867ab795a317907c2bf960d373dc2757870f912013a081104febb89f80bc",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "scripts/review-files.mjs",
-      "sha256": "264ae6f7ba16e071f117b0a6ef5bf93c0d67d72dc8b8a9a4a4ff1f9f720cbabc",
+      "sha256": "4287bcfe68e2b0c9412c046ec0afe00155cb6b6ff79f7e51de8491f343dcc598",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "scripts/build-site.mjs",
       "sha256": "765b80057db121fbde22093fe22518a694381a42b55e833c19f5b5a329e95e44",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "scripts/verify-http.mjs",
       "sha256": "ba6d3df5c7c05f49629742f3b0c79ce6b1f3b72beb190182fe67cb0afed54b24",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "scripts/check-webgl-release.mjs",
       "sha256": "7ea488ac93156d7297d998cbfe5dd53dc0a22ac862ac27d1d5e6856886443dfb",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": "tests/publication.test.mjs",
-      "sha256": "43d43328b67fb24dd1c39f7b206fcfb6542c70e8ca57e6f1f8c4b669526c7086",
+      "sha256": "ff87e1192c460d272986f1db4080542244af9ef886c09eb47fbc3f9499080b1a",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": ".github/workflows/ci.yml",
       "sha256": "992ccfe5f13696c131c2ae54993fa240939efe92508525072e4d73adc40e4f21",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": ".githooks/pre-commit",
       "sha256": "396f527abd6e7878c1048e3259d196fd58a6ef281323c6468a51832f4c2914d0",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     },
     {
       "path": ".githooks/pre-push",
       "sha256": "c2a9096f75d0856a6847dd525192064375c2aaf788261e74374ea4ed3582dcd1",
+      "digestMode": "exact-bytes",
       "provenance": "Authored publication infrastructure code; no GTA resource content"
     }
   ]
