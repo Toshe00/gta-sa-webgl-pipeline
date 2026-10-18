@@ -16,6 +16,6 @@ npm run build
 
 The build verifies exact reviewed SHA-256 values and runs the safety tests before creating ten authored technical output files. A failed gate prevents the Vercel build from succeeding. The public source repository uses standard Linux GitHub Actions runners without paid runners, artifact uploads or dependency caches; Vercel uses the Hobby plan.
 
-The intended Git integration uses `main` for production and other branches for previews. Its account prerequisite is not yet satisfied: the Vercel GitHub App must be installed and allowed to access this repository. Until that connection is verified, a plain push runs GitHub checks but does not deploy to Vercel. Explicit CLI deployments can test the same reviewed site in the already-created project. Neither route launches Unity or compiles a game.
+The existing Vercel project is connected to this GitHub repository, with `main` configured as its production branch (connection verified on 2026-10-18). Pushes run GitHub checks and trigger Vercel's own source build; other branches use previews. Vercel reruns the publication gate and tests before publishing. No manual deployment command, Unity invocation or game compilation is part of this Git workflow.
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for release gates, provenance, hosting headers, stable saves and rollback. Do not add original game data or change the disabled game-release policy without independent rights and release review.

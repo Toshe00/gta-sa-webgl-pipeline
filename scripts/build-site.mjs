@@ -20,7 +20,7 @@ export function buildSite(root = repositoryRoot) {
     if (branch === 'local') branch = execFileSync('git', ['branch', '--show-current'], { cwd: root }).toString().trim();
   } catch { /* A clean local source tree can be tested before the first commit. */ }
   const probes = { wasm: '/' + wasmName, wasmBr: '/' + wasmName + '.br', payload: '/' + textName, payloadBr: '/' + textName + '.br', data: '/' + dataName };
-  const release = { version: 'infrastructure-2', scope: 'infrastructure-only', commit, branch, gameAssetsPublished: false, probes };
+  const release = { version: 'infrastructure-3', scope: 'infrastructure-only', commit, branch, gameAssetsPublished: false, probes };
   const files = new Map([
     ['index.html', fs.readFileSync(path.join(root, 'site/index.html'))],
     ['diagnostics.js', fs.readFileSync(path.join(root, 'site/diagnostics.js'))],
